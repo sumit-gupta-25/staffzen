@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
+      const res = await axios.post("https://staffzen-backend-production.up.railway.app/api/login", formData);
       
       const { token, user } = res.data;
       const role = user.role;

@@ -16,7 +16,7 @@ export default function EmployeeDashboard() {
 
     const fetchTasks = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/tasks/employee/${userId}`, {
+        const res = await axios.get(`https://staffzen-backend-production.up.railway.app/api/tasks/employee/${userId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         setTasks(res.data);

@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/register', formData);
+      const res = await axios.post('https://staffzen-backend-production.up.railway.app/api/register', formData);
       console.log('Registration response:', res.data);
       alert('Registration successful! Please login.');
       navigate('/login');

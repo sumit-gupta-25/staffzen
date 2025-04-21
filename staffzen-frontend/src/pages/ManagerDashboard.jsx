@@ -15,7 +15,7 @@ export default function ManagerDashboard() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users", {
+        const res = await axios.get("https://staffzen-backend-production.up.railway.app/api/users", {
           headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` },
         });
 
